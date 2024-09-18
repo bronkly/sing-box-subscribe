@@ -719,13 +719,13 @@
 }
   "experimental": {
     "cache_file": {
-      "enabled": true  // 启用缓存文件功能。当此项设置为true时，启用 DNS 查询的缓存，以便加快后续相同查询的响应速度。
+      "enabled": true
     },
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",  // 定义 Clash API 的外部控制器地址。"0.0.0.0:9090" 表示在本机的9090端口上监听外部的连接请求。
-      "external_ui": "metacubexd",  // 指定外部用户界面(UI)的名称。这里的 "metacubexd" 是一个自定义 UI 的名称。
-      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",  // 提供外部 UI 的下载 URL。这个 URL 是从 GitHub 上下载 "metacubexd" UI 的压缩包。
-      "external_ui_download_detour": "select",  // 定义下载外部 UI 时使用的转发策略。"select" 表示将通过'select'出口选择转发
-      "default_mode": "rule"  // 设置 Clash API 的默认模式。"rule" 模式意味着流量将根据用户定义的规则进行路由。
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "metacubexd",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "select",
+      "default_mode": "rule"
     }
   }
