@@ -268,14 +268,23 @@
   "outbounds": [
     {
       "tag": "Proxy",
-      "outbounds": [],
+      "outbounds": [
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
+      ],
       "interrupt_exist_connections": true,
       "type": "selector"
     },
     {
       "tag": "Youtube",
       "outbounds": [
-        "Proxy"
+        "Proxy",
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -283,7 +292,11 @@
     {
       "tag": "Telegram",
       "outbounds": [
-        "Proxy"
+        "Proxy",
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -291,7 +304,11 @@
     {
       "tag": "Github",
       "outbounds": [
-        "Proxy"
+        "Proxy",
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -299,7 +316,11 @@
     {
       "tag": "Openai",
       "outbounds": [
-        "Proxy"
+        "Proxy",
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -307,7 +328,11 @@
     {
       "tag": "Netflix",
       "outbounds": [
-        "Proxy"
+        "Proxy",
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -315,7 +340,39 @@
     {
       "tag": "Google",
       "outbounds": [
-        "Proxy"
+        "Proxy",
+        "全部",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "全部",
+      "outbounds": [
+        "{all}"],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "🇭🇰 香港",
+      "outbounds": [
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "🇯🇵 日本",
+      "outbounds": [
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "🇺🇸 美国",
+      "outbounds": [
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -335,6 +392,6 @@
     {
       "type": "block",
       "tag": "block"
-    }
+    },
   ]
 }
