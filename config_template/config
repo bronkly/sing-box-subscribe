@@ -113,6 +113,7 @@
       "outbounds":[
         "自动选择",
         "direct",
+        "🇭🇰 香港",
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
@@ -124,6 +125,7 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
+        "🇭🇰 香港",
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
@@ -674,9 +676,10 @@
           "clash.razord.top",
           "yacd.metacubex.one",
           "yacd.haishan.me",
-          "d.metacubex.one"
+          "d.metacubex.one",
+          "foxfly666.eu.org"    // 特定后缀的域名
         ],
-        "outbound": "direct"
+        "outbound": "direct"    // 将通过'direct'出口直接连接
       },
       {
         "ip_is_private": true,
