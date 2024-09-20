@@ -677,9 +677,9 @@
           "yacd.metacubex.one",
           "yacd.haishan.me",
           "d.metacubex.one",
-          "foxfly666.eu.org"    // 特定后缀的域名
+          "foxfly666.eu.org"   
         ],
-        "outbound": "direct"    // 将通过'direct'出口直接连接
+        "outbound": "direct"   
       },
       {
         "ip_is_private": true,
