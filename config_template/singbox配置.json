@@ -676,6 +676,7 @@
           "clash.razord.top",
           "yacd.metacubex.one",      // 特定后缀的域名
           "yacd.haishan.me",
+          "foxfly666.eu.org",
           "d.metacubex.one"
         ],
         "outbound": "direct"        // 将通过'direct'出口直接连接
