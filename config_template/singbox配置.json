@@ -674,19 +674,19 @@
       {
         "domain": [
           "clash.razord.top",
-          "yacd.metacubex.one",
+          "yacd.metacubex.one",      // 特定后缀的域名
           "yacd.haishan.me",
           "d.metacubex.one"
         ],
-        "outbound": "direct"
+        "outbound": "direct"        // 将通过'direct'出口直接连接
       },
       {
         "ip_is_private": true,
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
+        "rule_set": "geosite-openai",     // OpenAI规则集
+        "outbound": "OpenAI"              // 将通过'openai'出口转发
       },
       {
         "rule_set": [
