@@ -75,6 +75,12 @@
   },
   "inbounds": [
     {
+    "type": "http",
+    "tag": "local-https",
+    "listen": "0.0.0.0",
+    "listen_port": 8080
+    }, 
+    {
       "type": "tproxy",
       "tag": "tproxy-in",
       "listen": "::",
@@ -414,6 +420,14 @@
       {
         "clash_mode": "direct",
         "outbound": "direct"
+      },
+      {
+      "inbound": ["local-https"],
+      "outbound": "Proxy"
+      },
+      {
+      "inbound": ["local-https"],
+      "outbound": "Proxy"
       },
       {
         "clash_mode": "global",
