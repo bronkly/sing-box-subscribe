@@ -167,15 +167,18 @@
       ]
     },
 
-    
-    {
+     {
       "tag":"🇭🇰香港",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
-		"ouo香港",
-		"🇭🇰 nano"
+		"{tag_1}"
       ],
-	"default": "ouo香港"
+      "filter":[
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"],"for":["tag_1"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     
     {
@@ -248,48 +251,7 @@
       "type": "block",
       "tag": "block"
     },
-    
 
-    {
-      "tag":"🇭🇰 nano",
-      "type":"urltest",
-      "outbounds":[
-		"{tag_2}"
-      ],
-      "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"],"for":["tag_2"]},
-		{"action":"exclude","keywords":["IP|CF"],"for":["tag_2"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
-    },
-    
-     {
-      "tag":"nano优化",
-      "type":"selector",
-      "outbounds":[
-		"{tag_2}"
-      ],
-      "filter":[
-        {"action":"include","keywords":["优化"],"for":["tag_2"]},
-		{"action":"exclude","keywords":["IP|CF"],"for":["tag_2"]}
-      ]
-    },
-    
-     {
-      "tag":"ouo香港",
-      "type":"urltest",
-      "outbounds":[
-		"{tag_1}"
-      ],
-      "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"],"for":["tag_1"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
-    },
     {
       "type": "dns",
       "tag": "dns-out"
