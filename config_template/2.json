@@ -366,7 +366,7 @@
       },
       {
         "package_name": "com.zhiliaoapp.musically",
-        "outbound": "tiktok"
+        "outbound": "🎵tiktok"
       },
       {
         "domain_suffix": [
@@ -463,8 +463,8 @@
       },
 
       {
-        "tag": "steamcn",
         "type": "remote",
+        "tag": "steamcn",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
         "download_detour": "direct"
