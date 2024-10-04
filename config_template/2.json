@@ -148,7 +148,7 @@
 
     {
       "type": "selector",
-      "tag": "openai",
+      "tag": "🧠openai",
       "outbounds": [
         "🇭🇰香港",
         "🇹🇼台湾",
@@ -159,7 +159,7 @@
     },
     {
       "type": "selector",
-      "tag": "tiktok",
+      "tag": "🎵tiktok",
       "outbounds": [
         "🇭🇰香港",
         "🇹🇼台湾",
@@ -169,6 +169,18 @@
       ]
     },
 
+
+    {
+      "type": "selector",
+      "tag": "🎮Games",
+      "outbounds": [
+        "select",
+        "🇭🇰香港",
+        "🇹🇼台湾",
+        "☸︎其它", 
+        "direct"
+      ]
+    },
 
     {
       "type": "selector",
@@ -290,9 +302,7 @@
           "icloudnative.io",
           "fuckcloudnative.io",
           "sealos.io",
-          "cdn.jsdelivr.us", 
-          "cm.steampowered.com", 
-          "steamserver.net"
+          "cdn.jsdelivr.us"
         ],
         "outbound": "direct"
       },
@@ -314,39 +324,12 @@
       },
       {
         "rule_set": [
-          "WeChat"
+          "WeChat", 
+          "steamcn"
         ],
         "outbound": "direct"
       },
-      {
-          "source_ip_cidr": [
-            "45.121.184.0/24", 
-            "103.10.124.0/23", 
-            "103.28.54.0/24", 
-            "146.66.152.0/24", 
-            "146.66.155.0/24", 
-            "153.254.86.0/24", 
-            "155.133.224.0/22", 
-            "155.133.230.0/24", 
-            "155.133.232.0/23", 
-            "155.133.234.0/24", 
-            "155.133.236.0/22", 
-            "155.133.240.0/23", 
-            "155.133.244.0/23", 
-            "155.133.246.0/24", 
-            "155.133.248.0/21", 
-            "162.254.192.0/21", 
-            "185.25.182.0/23", 
-            "190.217.32.0/22", 
-            "192.69.96.0/22",  
-            "205.196.6.0/24",  
-            "208.64.200.0/22",  
-            "208.78.164.0/22",  
-            "205.185.194.0/24"
-        ],
-        "outbound": "direct"
-      },
-      
+
       
       {
         "rule_set": "Bilibili",
@@ -363,7 +346,7 @@
       },
       {
         "rule_set": "OpenAI",
-        "outbound": "openai"
+        "outbound": "🧠openai"
       },
       {
         "domain_suffix": [
@@ -371,15 +354,15 @@
           "oaistatic.com",
           "oaiusercontent.com"
         ],
-        "outbound": "openai"
+        "outbound": "🧠openai"
       },
       {
         "package_name": "com.openai.chatgpt",
-        "outbound": "openai"
+        "outbound": "🧠openai"
       },
       {
         "rule_set": "TikTok",
-        "outbound": "tiktok"
+        "outbound": "🎵tiktok"
       },
       {
         "package_name": "com.zhiliaoapp.musically",
@@ -430,7 +413,10 @@
         "rule_set": "geoip-cn",
         "outbound": "direct"
       },
-      
+      {
+        "rule_set": ["geosite-category-games", "geosite-dmm"],
+        "outbound": "🎮Games"
+      },
       {
         "type": "logical",
         "mode": "and",
@@ -472,99 +458,123 @@
         "type": "remote",
         "tag": "geosite-geolocation-!cn",
         "format": "binary",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "direct"
       },
-      
+
+      {
+        "tag": "steamcn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
+        "download_detour": "direct"
+      },
+
+      {
+        "tag": "geosite-category-games",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-dmm",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/dmm.srs",
+        "download_detour": "direct"
+      },
+
+
       {
         "type": "remote",
         "tag": "geoip-cn",
         "format": "binary",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-cn.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geoip-google",
         "format": "binary",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-google.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-google.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geoip-telegram",
         "format": "binary",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-telegram.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-telegram.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geoip-twitter",
         "format": "binary",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-twitter.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-twitter.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geoip-netflix",
         "format": "binary",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-netflix.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_ip_rule_set/geoip-netflix.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "Global",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Global.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Global.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "YouTube",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/YouTube.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/YouTube.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "OpenAI",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/OpenAI.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/OpenAI.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "TikTok",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/TikTok.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/TikTok.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "Telegram",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Telegram.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Telegram.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "Netflix",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Netflix.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Netflix.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "WeChat",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/WeChat.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/WeChat.json",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "Bilibili",
         "format": "source",
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Bilibili.json",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yangchuansheng/sing-box-geosite/main/rule/Bilibili.json",
         "download_detour": "direct"
       }
     ],
@@ -577,7 +587,7 @@
       "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "secret": "",
-      "external_ui_download_url": "https://ghp.ci/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
       "external_ui_download_detour": "direct",
       "default_mode": "rule"
     },
