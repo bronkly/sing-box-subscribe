@@ -7,19 +7,20 @@
   "dns": {
     "servers": [
       {
-        "tag": "dns_proxy",
-        "address": "https://1.1.1.1/dns-query",
-        "address_resolver": "dns_resolver",
-        "strategy": "prefer_ipv4",
-        "detour": "select"
-      },
-      {
         "tag": "dns_direct",
-        "address": "h3://dns.alidns.com/dns-query",
+        "address": "223.5.5.5",
         "address_resolver": "dns_resolver",
         "strategy": "prefer_ipv4",
         "detour": "direct"
       },
+      {
+        "tag": "dns_proxy",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_resolver",
+        "strategy": "ipv4_only",
+        "detour": "select"
+      },
+
       {
         "tag": "dns_block",
         "address": "rcode://refused"
@@ -65,7 +66,8 @@
           "fuckcloudnative.io",
           "sealos.io",
           "foxfly666.eu.org", 
-          "cdn.jsdelivr.us"
+          "cdn.jsdelivr.us",
+	  "ipw.cn"
         ],
         "server": "dns_direct"
       },
