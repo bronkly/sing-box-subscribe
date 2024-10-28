@@ -41,13 +41,6 @@
         "server": "dns_proxy"
       },
       {
-        "domain_suffix": [
-          "sgameicon.ecology.smoba.qq.com",
-          "qq.com"
-        ],
-        "server": "block"
-      },
-      {
         "process_name": [
           "TencentMeeting",
           "NemoDesktop",
