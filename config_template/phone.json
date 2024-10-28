@@ -19,11 +19,15 @@
         "detour": "select"
       },
       {
-        "tag": "dns_block",
-        "address": "rcode://refused"
+        "tag": "block",
+        "address": "rcode://success"
       }
     ],
     "rules": [
+      {
+        "rule_set": "geosite-category-ads-all",
+        "server": "block"
+      },
       {
         "outbound": "any",
         "server": "dns_direct"
@@ -104,7 +108,7 @@
   "inbounds": [
     {
       "type": "tun",
-      "inet4_address": "172.19.0.1/30",
+      "address": "172.19.0.1/30",
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
@@ -286,6 +290,14 @@
       ]
     },
     {
+      "tag":"AdBlock",
+      "type":"selector",
+      "outbounds":[
+        "block",
+        "direct"
+      ]
+    },
+    {
       "type": "direct",
       "tag": "direct"
     },
@@ -337,6 +349,10 @@
           "kubectl"
         ],
         "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "AdBlock"
       },
       {
         "rule_set": [
