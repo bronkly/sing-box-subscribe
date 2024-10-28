@@ -388,6 +388,11 @@
         ],
         "outbound": "select"
       },
+        "domain_suffix": [
+          "sgameicon.ecology.smoba.qq.com"
+        ],
+        "outbound": "block"
+      },
       {
         "process_name": [
           "DropboxMacUpdate",
