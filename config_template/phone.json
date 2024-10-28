@@ -355,6 +355,10 @@
         "outbound": "AdBlock"
       },
       {
+        "domain": "sgameicon.ecology.smoba.qq.com",
+        "outbound": "AdBlock"
+      },
+      {
         "rule_set": [
           "WeChat",
           "steamcn"
