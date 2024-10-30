@@ -187,14 +187,13 @@
         "🇹🇼台湾"
       ]
     },
-     {
-        "tag": "HOME",
-        "outbounds": [
-          "回家"
-        ],
-        "interrupt_exist_connections": true,
-        "type": "selector"
-      },
+        {
+            "type": "selector",
+            "tag": "HOME",
+            "outbounds": [
+                "home"
+            ]
+        },
     {
       "tag": "🇭🇰香港",
       "type": "urltest",
@@ -297,14 +296,14 @@
         }
       ]
     },
-      {
-        "type": "shadowsocks",
-        "tag": "回家",
-        "server": "ss.foxfly666.eu.org",
-        "server_port": 23459,
-        "method": "aes-128-gcm",
-        "password": "password"
-      },
+            {
+            "type": "shadowsocks",
+            "tag": "home",
+            "server": "ss.foxfly666.eu.org",
+            "server_port": 23459,
+            "method": "aes-128-gcm",
+            "password": "password"
+        },
     {
       "tag":"AdBlock",
       "type":"selector",
@@ -345,7 +344,7 @@
           "192.168.100.0/24",
           "192.168.0.1"
         ],
-        "outbound": "回家"
+        "outbound": "home"
       },
       {
         "domain_suffix": [
