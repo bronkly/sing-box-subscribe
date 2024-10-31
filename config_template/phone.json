@@ -25,6 +25,12 @@
     ],
     "rules": [
       {
+          "domain": [
+            "ss.foxfly666.eu.org"
+          ],
+          "server": "dns_direct"
+        },
+      {
         "rule_set": "geosite-category-ads-all",
         "server": "block"
       },
@@ -209,6 +215,16 @@
       "tolerance": 50
     },
     {
+        "domain_strategy": "prefer_ipv6",
+        "method": "aes-256-gcm",
+        "password": "zheng139",
+        "server": "ss.foxfly666.eu.org",
+        "server_port": 8388,
+        "tag": "home",
+        "type": "shadowsocks",
+        "udp_over_tcp": false
+      },
+    {
       "tag": "🇹🇼台湾",
       "type": "selector",
       "outbounds": [
@@ -324,6 +340,11 @@
         "clash_mode": "global",
         "outbound": "select"
       },
+      "ip_cidr": [
+            "192.168.100.0/24"
+          ],
+          "outbound": "home"
+        },
       {
         "domain_suffix": [
           "icloudnative.io",
