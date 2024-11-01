@@ -93,9 +93,15 @@
       "tag":"Proxy",
       "type":"selector",
       "outbounds":[
+        "HongKong",
         "auto",
         "direct",
-        "{all}"
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
       ]
     }, 
     {
